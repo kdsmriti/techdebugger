@@ -25,11 +25,13 @@ body, html {
   }
   .header-logo img{
     height:auto;
-    width:150px;
+    width:200px;
+    margin-left:-300px;
   }
 .header-buttons{
   display: flex;
  justify-items:center ;
+ margin-right: 5px;
 }
 
 .Footer{
@@ -66,6 +68,7 @@ body, html {
 .Section6,.Section1,.Section2,.Section4,.Section5{
   line-height: 20px;
 }
+
 .Footer2
 {
   height:40px;
