@@ -1,0 +1,91 @@
+body, html {
+    margin:0;
+    padding:0;
+    width: 100%;
+    overflow:visible;
+  }
+.Header {
+   margin:0;
+   padding: 0;
+    top:0;
+    height: auto; 
+    width:100vw;
+    background-color: rgb(76, 172, 228);
+    display:flex;
+    justify-content:right;
+    align-items: center;
+    position:relative;
+  }
+  .Header li{
+    list-style: none;
+    display:inline;
+    justify-content:space-between;
+    padding:30px;
+   
+  }
+  .header-logo img{
+    height:auto;
+    width:150px;
+  }
+.header-buttons{
+  display: flex;
+ justify-items:center ;
+}
+
+.Footer{
+  height:400px;
+  background:  rgb(41, 150, 212);
+  width:100vw;
+  position: relative;
+  display: flex;
+  margin: 0;
+  gap:0px;
+  font-size: 12px;
+
+}
+.Footer li {
+ display:flex;
+ justify-content: space-between;
+ color: white;
+}
+.Footer p {
+  font-size:15px;
+  font-weight: 600;
+  color: black;
+  margin-left: -50px;
+
+}
+.Icons {
+  font-size: 30px;
+  color:white;
+  display: flex;
+  gap: 5px;
+  padding:10px;
+   margin: 10px;
+}
+.Section6,.Section1,.Section2,.Section4,.Section5{
+  line-height: 20px;
+}
+.Footer2
+{
+  height:40px;
+  background-color: rgb(57, 189, 230);
+  width: 100vw; 
+  display: flex;
+  align-items: center;
+}
+.Footer2 li{
+  list-style-type:none;
+  font-size: 12px;
+  color: white;
+  display: inline-block;
+  margin: 5px;
+}
+.Footer2-left{
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 500px;
+  color: black;
+}
+
+
