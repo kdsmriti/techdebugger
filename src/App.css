@@ -39,5 +39,11 @@
 .read-the-docs {
   color: #888;
 }
+@media(max-width:480px)
+{
+  :Header{
+    background-color: aquamarine;
+  }
+}
 
 

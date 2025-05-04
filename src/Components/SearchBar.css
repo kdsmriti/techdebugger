@@ -26,3 +26,8 @@ input{
 ::placeholder{
    color: rgb(60, 61, 61);  
 }
+@media(max-width: 998px){
+    .SearchBar{
+        width:100px;
+    }
+}

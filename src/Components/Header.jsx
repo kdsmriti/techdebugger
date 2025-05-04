@@ -3,25 +3,25 @@ import { NavLink } from 'react-router-dom'
 import './Layout.css'
 import SearchBar from './SearchBar'
 import Button from './Button'
+import { GiHamburgerMenu } from "react-icons/gi";``
 import { useState } from 'react'
 const Header = () => {
-  const [isLogin,setLogin]=useState(true);
-  const handleLogin=()=>{
-    setLogin(true);
+  const [showMenu,setshowMenu]=useState(false);
+  const[isVisible,setVisible]=useState(true);
+  const handleMenu=()=>{
+    setshowMenu(!showMenu);
+    setVisible(!isVisible);
   }
-  const handlesignUp=()=>{
-    setLogin(false);
-  }
-  
   return (
   <>
   <div className="Header">
     <div className="header-logo">
       <img src='Images/Logo.png' alt='logo'></img>
-    </div>
-    <div className="SearchBar">
+    </div><div className="SearchBar">
       <SearchBar/>
     </div>
+    <div className={showMenu?"menu-mobile":"menu-web"}>
+    
   <ul>
   <li>
             <NavLink to ='/notes'className={({isActive})=>isActive? "active-link":""}>
@@ -54,12 +54,12 @@ const Header = () => {
             </NavLink>
             </li>
             </ul>
-            <div className="header-buttons"> <Button title="Login" /></div>
-          
             </div>
-          
-
- 
+            <div className="ham-menu">
+              <button onClick={handleMenu}><GiHamburgerMenu /></button>
+            </div>
+            <div className={isVisible?"header-buttons":"not-visible"}> <Button title="Login"/></div>
+            </div>
   </>
   )
 }

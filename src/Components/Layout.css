@@ -2,7 +2,6 @@ body, html {
     margin:0;
     padding:0;
     width: 100%;
-    overflow:visible;
   }
 .Header {
    margin:0;
@@ -32,6 +31,7 @@ body, html {
   display: flex;
  justify-items:center ;
  margin-right: 5px;
+ cursor:pointer;
 }
 
 .Footer{
@@ -73,7 +73,7 @@ body, html {
 {
   height:40px;
   background-color: rgb(57, 189, 230);
-  width: 100vw; 
+  width:100vw; 
   display: flex;
   align-items: center;
 }
@@ -90,5 +90,47 @@ body, html {
   margin-left: 500px;
   color: black;
 }
+.ham-menu{
+  display: none;
+}
+.menu-mobile{
+  display: flex;
+  flex-direction: column;
+}
+.menu-mobile li{
+  display: flex;
+  flex-direction: column;
+  padding:2px;
+  align-items:left;
+  margin:2px;
+  height:20px;
+}
+.not-visible{
+  display: none;
+}
 
+@media(max-width: 998px){
+  .ham-menu{
+    display:inline-block;
+    cursor:pointer;
+  }
+  .menu-web{
+    display:none;
+  }
+  .Header{
+    display: flex;
+    flex-direction:row;
+   padding:5px;
+   margin: 5px;
+   justify-content: space-evenly;
+  }
+  .header-logo{
+    width:500px;
+    height: auto;
+  }
+
+
+  }
+ 
+  
 
