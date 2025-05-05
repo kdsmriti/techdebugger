@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaSquareFacebook } from "react-icons/fa6";
 import { AiFillTikTok } from "react-icons/ai";
@@ -6,13 +6,15 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 
+
 const Footer = () => {
+  const[showItems,setshowItems]=useState(true);
   return (
     <>
     <div className="Footer">
       <div className="Section1">
         <ul>
-          <li><Link to ='/courses'>LOCAL COURSES</Link></li>
+        <li className="linked"><Link to ='/courses'>LOCAL COURSES</Link></li>
           <li>Computer Basic</li>
           <li>Advanced Office Package</li>
           <li>Computer Operator</li>
@@ -32,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="Section2">
           <ul>
-           <li> <Link to='/courses'>GLOBAL COURSES </Link></li>
+          <li className="linked"> <Link to='/courses'>GLOBAL COURSES </Link></li>
            <li>Digital Marketing</li>
            <li> Web Design | Dev | Hosting</li>
            <li>Application Development</li>
@@ -43,7 +45,7 @@ const Footer = () => {
            <li>Robotics | Drone Making</li>
            <li>Exchange Server</li>
            <li>CEH | CHFI</li>
-           <li><Link to='/courses'>OJT </Link></li>
+           <li className="linked"><Link to='/courses'>OJT </Link></li>
            <li>School Level</li>
            <li>OJT After SEE</li>
            <li>OJT After +2</li>
@@ -53,21 +55,21 @@ const Footer = () => {
         </div>
         <div className="Section3">
           <ul>
-            <li> <Link ro='/courses'>BRIDGE COURSE After SEE</Link></li>
+          <li className="linked"> <Link to='/courses'>BRIDGE COURSE After SEE</Link></li>
             <li> A-Level</li>
             <li>Science [PCBM]</li>
             <li>Computer Science</li>
             <li>Hotel Management</li>
             <li>Commerce [B.Std.]</li>
             <li>LAW</li>
-            <li><Link to=''>Entrance Preparation
+            <li className="linked"><Link to=''>Entrance Preparation
             <br></br>[CTEVT]After SEE</Link></li>
             <li>Nursing</li>
             <li>HA | LAB</li>
             <li>Pharmacy</li>
             <li>Radiography | Radiology</li> 
             <li>Physiotherapy</li> 
-            <li><Link to='/courses'>LANGUAGE CLASSES</Link></li>
+            <li className="linked"><Link to='/courses'>LANGUAGE CLASSES</Link></li>
             <li>English Language</li>
             <li>PTE Academic</li>
             <li>Home Tution</li>
@@ -77,8 +79,8 @@ const Footer = () => {
             </ul>
             </div>
             <div className="Section4"> 
-              <ul>    
-              <li><Link to='/courses'>COMPANY</Link></li>
+            <ul>    
+            <li className="linked"><Link to='/courses'>COMPANY</Link></li>
             <li>About Us</li>
             <li>Location Video</li>
             <li>Team Members</li>
@@ -96,8 +98,8 @@ const Footer = () => {
           </ul>
         </div>
         <div className="Section5">
-          <ul>
-        <li><Link to='/courses'>ENTRANCE PREPARATION AFTER +2</Link></li>
+        <ul>
+        <li className="linked"><Link to='/courses'>ENTRANCE PREPARATION AFTER +2</Link></li>
         <li>BE | B.Arch.</li>
         <li>BSc.CSIT</li>
         <li>LAW</li>
@@ -117,19 +119,19 @@ const Footer = () => {
         </div>
         <div className="Section6">
           <ul>
-        <li><Link to='/courses'> ACADEMIC COMPUTER COURSES</Link></li>
+        <li className="linked"><Link to='/courses'> ACADEMIC COMPUTER COURSES</Link></li>
         <li>Computer Class 9</li>
         <li>Computer Class 10</li>
         <li>Computer Class 11</li>
         <li>Computer Class 12</li>
         <br></br>
-        <li><Link to ='/courses'>TECHNICAL & VOCATIONAL STREAM</Link></li>
+        <li className="linked"><Link to ='/courses'>TECHNICAL & VOCATIONAL STREAM</Link></li>
         <li>Computer Engineering Grade 9</li>
         <li>Computer Engineering Grade 10</li>
         <li>Computer Engineering Grade 11</li>
         <li>Computer Engineering Grade 12</li>
         <br></br>
-        <li> <Link to=''>Contact Us</Link></li>
+        <li className="linked"> <Link to=''>Contact Us</Link></li>
         <li>023-575786 | 9814975786 </li>
         <li>Damak-5, Jhapa, Nepal</li>
         </ul>
@@ -143,15 +145,16 @@ const Footer = () => {
         </div>
         </div>
         </div>
+    
         <div className="Footer2">
           <ul>
-            <li> <Link to=''>Diclaimer |</Link> </li>
-             <li> <Link to=''> Privacy Policy |</Link></li>
-             <li><Link to=''>Terms of Services | </Link></li>
-             <li><Link to='https://maps.app.goo.gl/iDJ6VUcU8D3Mf74o8'>Location of Tech Debugger-Google Map</Link></li>
+          <li className="linked"> <Link to=''>Diclaimer |</Link> </li>
+          <li className="linked"> <Link to=''> Privacy Policy |</Link></li>
+          <li className="linked"><Link to=''>Terms of Services | </Link></li>
+          <li className="map"><Link to='https://maps.app.goo.gl/iDJ6VUcU8D3Mf74o8'>Location of Tech Debugger-Google Map</Link></li>
           </ul>
           <div className="Footer2-left">
-          © 2025, Tech Debugger Pvt. Ltd. All rights reserved.
+          ©2025, Tech Debugger Pvt. Ltd. All rights reserved.
           </div>
         </div>
         </>

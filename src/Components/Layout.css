@@ -2,7 +2,6 @@ body, html {
     margin:0;
     padding:0;
     width: 100%;
-    overflow:visible;
   }
 .Header {
    margin:0;
@@ -29,9 +28,10 @@ body, html {
     margin-left:-300px;
   }
 .header-buttons{
-  display: flex;
+  display:flex;
  justify-items:center ;
  margin-right: 5px;
+ cursor:pointer;
 }
 
 .Footer{
@@ -73,7 +73,7 @@ body, html {
 {
   height:40px;
   background-color: rgb(57, 189, 230);
-  width: 100vw; 
+  width:100vw; 
   display: flex;
   align-items: center;
 }
@@ -90,5 +90,85 @@ body, html {
   margin-left: 500px;
   color: black;
 }
+.ham-menu{
+  display: none;
+}
+.menu-mobile{
+  display: flex;
+  flex-direction: column;
+}
+.menu-mobile li{
+  display: flex;
+  flex-direction: column;
+  padding:2px;
+  align-items:left;
+  margin:2px;
+  height:20px;
+}
+.not-visible{
+  display: none;
+}
+button{
+  height:30px;
+  align-items: center;
+font-size:15px;
+}
 
+@media(max-width:768px){    
+  .ham-menu{
+    display:inline-block;
+    cursor:pointer;
+  }
+
+  .menu-web{
+    display:none;
+  }
+  .Header{
+  display: flex;
+  flex-direction:row;
+   padding:0px;
+   margin:0px;
+   justify-content: space-evenly;
+   align-items: right;
+  }
+  .header-logo{
+  visibility: hidden;
+  }
+  .Footer{
+    flex-wrap:wrap;
+    margin:0px;
+    padding:0px;
+  }
+  .Footer li {
+    display:none;
+  }
+  .Footer li.linked {
+    display: list-item;
+    list-style-type:none;
+  }
+  .Footer2{
+   flex-wrap: wrap;
+  }
+  .Footer2 li.map{
+    display: none;
+  }
+  .Footer2-left{
+    display: none;
+  }
+}
+@media(max-width:1024px){
+  .ham-menu{
+    display: inline-block;
+  }
+  .menu-web{
+    display: none;
+  }
+  
+ 
+}
+
+
+  
+ 
+  
 
