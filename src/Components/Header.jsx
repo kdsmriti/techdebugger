@@ -3,14 +3,16 @@ import { NavLink } from 'react-router-dom'
 import './Layout.css'
 import SearchBar from './SearchBar'
 import Button from './Button'
-import { GiHamburgerMenu } from "react-icons/gi";``
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MdCancelPresentation } from "react-icons/md";
 import { useState } from 'react'
 const Header = () => {
-  const [showMenu,setshowMenu]=useState(false);
-  const[isVisible,setVisible]=useState(true);
-  const handleMenu=()=>{
-    setshowMenu(!showMenu);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible,setVisible]=useState(true);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
     setVisible(!isVisible);
+
   }
   return (
   <>
@@ -20,8 +22,7 @@ const Header = () => {
     </div><div className="SearchBar">
       <SearchBar/>
     </div>
-    <div className={showMenu?"menu-mobile":"menu-web"}>
-    
+    <div className={isMenuOpen?"menu-mobile":"menu-web"}>
   <ul>
   <li>
             <NavLink to ='/notes'className={({isActive})=>isActive? "active-link":""}>
@@ -55,10 +56,11 @@ const Header = () => {
             </li>
             </ul>
             </div>
-            <div className="ham-menu">
-              <button onClick={handleMenu}><GiHamburgerMenu /></button>
-            </div>
             <div className={isVisible?"header-buttons":"not-visible"}> <Button title="Login"/></div>
+            <div className="ham-menu">
+            <button onClick={toggleMenu}>{isMenuOpen ? <MdCancelPresentation/>:<GiHamburgerMenu />}
+          </button>
+            </div>
             </div>
   </>
   )
